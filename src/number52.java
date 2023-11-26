@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class number52 {
+  public static void main(String[] args) {
+    //영어 서수 표현하기
+    //숫자th  : 예외사항 1st, 2nd, 3rd, 11th, 12th
+    Scanner scan = new Scanner(System.in);
+    System.out.println("입력하세요:");
+    int num = scan.nextInt();
+
+    if (num == 11 || num == 12 || num == 13) {
+      System.out.println(num + "th");
+    } else if (num % 10 == 1) {
+      System.out.println(num + "st");
+    } else if (num % 10 == 2) {
+      System.out.println(num + "nd");
+    } else if (num % 10 == 3) {
+      System.out.println(num + "rd");
+    } else {
+      System.out.println(num + "th");
+    }
+  }
+}
